@@ -2,8 +2,7 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   padding: 20px;
-  background: url('background.jpg') no-repeat center center fixed;
-  background-size: cover;
+  background-color: #f4f4f4;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -12,27 +11,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: rgba(0, 123, 255, 0.8);
+  background-color: #007bff;
   color: white;
   border-radius: 5px;
-}
-
-nav {
-  background-color: rgba(0, 123, 255, 0.9);
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 15px;
-  font-size: 18px;
-}
-
-nav a:hover {
-  text-decoration: underline;
 }
 
 button {
@@ -50,7 +31,7 @@ button:hover {
 }
 
 section {
-  background: rgba(255, 255, 255, 0.9);
+  background: white;
   padding: 15px;
   margin: 20px auto;
   border-radius: 5px;
@@ -71,7 +52,7 @@ input, textarea {
   color: white;
 }
 
-.dark-mode header, .dark-mode nav {
+.dark-mode header {
   background-color: #222;
 }
 
