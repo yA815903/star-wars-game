@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accessibility Helper</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.55.2/phaser.min.js"></script>
+    <script src="https://cdn.rawgit.com/naptha/tesseract.js/0.2.0/dist/tesseract.min.js"></script> <!-- Include Tesseract.js -->
 </head>
 <body>
     <header>
@@ -13,23 +15,19 @@
     </header>
     <main>
         <section>
-            <h2>📷 Image to Text</h2>
-            <input type="file" id="imageInput" accept="image/*">
-            <button id="processImage">🔍 Process Image</button>
-            <p id="textOutput">Extracted text will appear here...</p>
+            <h2>📷 Upload Image</h2>
+            <input type="file" id="imageUpload" accept="image/*">
+            <button id="processImage">Process Image</button>
         </section>
         <section>
-            <h2>🗣️ Text to Speech</h2>
-            <textarea id="textToSpeak" rows="4" cols="50" placeholder="Type text here..."></textarea>
-            <button id="speakText">🔊 Speak Text</button>
+            <h2>📝 Extracted Text</h2>
+            <p id="extractedText">Your extracted text will appear here...</p>
         </section>
         <section>
-            <h2>🌐 Search Google</h2>
-            <input type="text" id="searchQuery" placeholder="Enter words to search...">
-            <button id="searchButton">🔍 Search Google</button>
+            <h2>🔍 Google Search</h2>
+            <button id="searchGoogle">Search Google</button>
         </section>
     </main>
     <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/4.0.2/tesseract.min.js"></script>
 </body>
 </html>
