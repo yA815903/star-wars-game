@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Star Wars Duel</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Helper</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="gameContainer"></div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
-  <script src="script.js"></script>
+    <header>
+        <h1>Accessibility Helper</h1>
+        <button id="toggleTheme">🌙 Dark Mode</button>
+    </header>
+    <main>
+        <section>
+            <h2>📷 Image to Text</h2>
+            <input type="file" id="imageInput" accept="image/*">
+            <button id="processImage">🔍 Process Image</button>
+            <p id="textOutput">Extracted text will appear here...</p>
+        </section>
+        <section>
+            <h2>🗣️ Text to Speech</h2>
+            <textarea id="textToSpeak" rows="4" cols="50" placeholder="Type text here..."></textarea>
+            <button id="speakText">🔊 Speak Text</button>
+        </section>
+        <section>
+            <h2>🌐 Search Google</h2>
+            <input type="text" id="searchQuery" placeholder="Enter words to search...">
+            <button id="searchButton">🔍 Search Google</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/4.0.2/tesseract.min.js"></script>
 </body>
 </html>
