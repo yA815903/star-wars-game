@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accessibility Helper</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <title>Accessible Reader</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.55.2/phaser.min.js"></script>
-    <script src="https://cdn.rawgit.com/naptha/tesseract.js/0.2.0/dist/tesseract.min.js"></script> <!-- Include Tesseract.js -->
+    <script src="https://cdn.rawgit.com/naptha/tesseract.js/0.2.0/dist/tesseract.min.js"></script>
 </head>
 <body>
     <header>
-        <h1>Accessibility Helper</h1>
+        <h1>Accessible Reader</h1>
         <button id="toggleTheme">🌙 Dark Mode</button>
     </header>
     <main>
@@ -18,10 +18,11 @@
             <h2>📷 Upload Image</h2>
             <input type="file" id="imageUpload" accept="image/*">
             <button id="processImage">Process Image</button>
-        </section>
-        <section>
-            <h2>📝 Extracted Text</h2>
-            <p id="extractedText">Your extracted text will appear here...</p>
+            <div id="loadingIndicator" style="display: none;">Processing...</div>
+            <progress id="progressBar" value="0" max="1" style="display: none;"></progress>
+            <img id="imagePreview" src="" alt="Image Preview" style="display: none; max-width: 100%; margin-top: 1rem;">
+            <button id="readText">🔊 Read Aloud</button>
+            <button id="clearText">❌ Clear Text</button>
         </section>
         <section>
             <h2>🔍 Google Search</h2>
