@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const toggleThemeButton = document.getElementById('toggleTheme');
     const processImageButton = document.getElementById('processImage');
-    const readTextButton = document.getElementById('readText');
     const clearTextButton = document.getElementById('clearText');
     const searchGoogleButton = document.getElementById('searchGoogle');
     const loadingIndicator = document.getElementById('loadingIndicator');
@@ -48,15 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
         } else {
             alert('Please upload an image first.');
-        }
-    });
-
-    readTextButton.addEventListener('click', () => {
-        if (extractedText) {
-            const utterance = new SpeechSynthesisUtterance(extractedText);
-            speechSynthesis.speak(utterance);
-        } else {
-            alert('No text to read.');
         }
     });
 
